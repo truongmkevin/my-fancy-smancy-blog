@@ -1,30 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Posts</h1>
+<h1>The Fancys Posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Entry</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.author %></td>
-        <td><%= post.entry %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @posts.each do |post| %>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="post-title">
+            <td><%= post.title %></td>
+          </div>
+          <div class="author">
+            <td>Author: <strong><%= post.author %></strong></td>
+          </div>
+        </div>
+        <div class="panel-body">
+          <td><%= post.entry %></td>
+        </div>
+        <div class="panel-footer">
+          <td><%= link_to 'Show', post, class: "btn btn-info" %></td>
+          <td><%= link_to 'Edit', edit_post_path(post), class: "btn btn-info" %></td>
+          <td><%= link_to 'Destroy', post, method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %></td>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
 
 <br>
 
