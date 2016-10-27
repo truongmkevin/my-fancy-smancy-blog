@@ -8,7 +8,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <div class="post-title">
-            <td><%= post.title %></td>
+            <td><%= link_to post.title, post %></td>
           </div>
           <div class="author">
             <td>Author: <strong><%= post.author %></strong></td>
@@ -18,7 +18,6 @@
           <td><%= post.entry %></td>
         </div>
         <div class="panel-footer">
-          <td><%= link_to 'Show', post, class: "btn btn-info" %></td>
           <td><%= link_to 'Edit', edit_post_path(post), class: "btn btn-info" %></td>
           <td><%= link_to 'Destroy', post, method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %></td>
         </div>

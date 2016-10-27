@@ -1,12 +1,12 @@
 .post-title {
   padding: 10px;
   font-size: 30px;
+
+  a:hover {
+    background-color: inherit;
+  }
 }
 
 .author {
   padding-top: 15px;
-}
-
-a:hover {
-  background-color: inherit
 }
