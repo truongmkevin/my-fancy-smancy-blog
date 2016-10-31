@@ -1,12 +1,29 @@
-.post-title {
-  padding: 10px;
-  font-size: 30px;
+.posts {
 
   a:hover {
     background-color: inherit;
   }
+
+}
+
+.post-title {
+  padding: 10px;
+  font-size: 30px;
+  color: blue;
 }
 
 .author {
   padding-top: 15px;
+}
+
+.post-buttons {
+
+  .btn{
+    color: #fff;
+  }
+
+  .btn:hover .btn:visited {
+    color: inherit;
+  }
+
 }
