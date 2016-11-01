@@ -22,4 +22,19 @@
   </div>
 </div>
 
+<%= render "comments/form" %>
+
+<div class="panel panel-primary">
+  <div class="panel-header">
+    <h3>Comments</h3>
+  </div>
+  <% @post.comments.each do |comment| %>
+    <div class="panel-body">
+      <p><strong><%= comment.author %></strong> says:</p>
+      <p><%= comment.entry %></p>
+    </div>
+  <% end %>
+</div>
+
+
 <%= link_to 'Back', posts_path, class: "btn btn-default" %>

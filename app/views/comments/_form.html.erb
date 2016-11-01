@@ -19,6 +19,9 @@
     <%= f.label :entry %><br>
     <%= f.text_area :entry %>
   </div>
+  <div class="field">
+    <%= f.number_field :post_id, value: @post.id %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
