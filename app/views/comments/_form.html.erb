@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :entry %><br>
-    <%= f.text_area :entry %>
+    <%= f.text_area :entry, placeholder: "Your reply" %>
   </div>
   <div class="field hidden">
     <%= f.number_field :post_id, value: @post.id %>
